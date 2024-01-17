@@ -1,7 +1,7 @@
 ﻿
 namespace EFProject;
 
-public class ReadAndConvertCsv
+public class ReadAndConvertCsvToList
 {
     public List<User> UserCsv()
     {
