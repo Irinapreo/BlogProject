@@ -6,7 +6,7 @@ public class ReadAndConvertCsvToList
     public List<User> UserCsv()
     {
         var users = new List<User>();
-        var lines = File.ReadAllLines("../../../User.csv");
+        var lines = File.ReadAllLines("../User.csv");
 
         foreach (var line in lines)
         {
@@ -25,7 +25,7 @@ public class ReadAndConvertCsvToList
             }
             else
             {
-                Console.WriteLine($"Invalid CSV data in file {"../../../User.csv"}: {line}");
+                Console.WriteLine($"Invalid CSV data in file {"../User.csv"}: {line}");
             }
         }
         return users;
@@ -35,15 +35,11 @@ public class ReadAndConvertCsvToList
     {
         var posts = new List<Post>();
 
-        // Read all lines from the CSV file
-        var lines = File.ReadAllLines("../../../Post.csv");
+        var lines = File.ReadAllLines("../Post.csv");
 
         foreach (var line in lines)
         {
-            // Split the line into individual values
             var values = line.Split(',');
-
-            // Parse the values and create User object
             if (values.Length == 5 
                 && int.TryParse(values[0], out int id) 
                 && int.TryParse(values[3], out int blogId) 
@@ -62,7 +58,7 @@ public class ReadAndConvertCsvToList
             }
             else
             {
-                Console.WriteLine($"Invalid CSV data in file {"../../../Post.csv"}: {line}");
+                Console.WriteLine($"Invalid CSV data in file {"../Post.csv"}: {line}");
             }
         }
 
@@ -73,15 +69,12 @@ public class ReadAndConvertCsvToList
     {
         var blogs = new List<Blog>();
 
-        // Read all lines from the CSV file
-        var lines = File.ReadAllLines("../../../Blog.csv");
+        var lines = File.ReadAllLines("../Blog.csv");
 
         foreach (var line in lines)
         {
-            // Split the line into individual values
             var values = line.Split(',');
 
-            // Parse the values and create User object
             if (values.Length == 4 &&
                 int.TryParse(values[0], out int id) &&
                 int.TryParse(values[3], out int postId))
@@ -98,7 +91,7 @@ public class ReadAndConvertCsvToList
             }
             else
             {
-                Console.WriteLine($"Invalid CSV data in file {"../../../Blog.csv"}: {line}");
+                Console.WriteLine($"Invalid CSV data in file {"../Blog.csv"}: {line}");
             }
         }
         return blogs;
