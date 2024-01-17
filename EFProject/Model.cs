@@ -7,14 +7,25 @@ public class Post
     public string Title { get; set; }
     public string Content { get; set; }
 
-    public int BlogId { get; set; } 
+    public int BlogId { get; set; }
+    public int UserId { get; set; }
     public Blog Blog { get; set; } 
+}
+public class User
+{
+    public int UserId { get; set; }
+    public string Username { get; set; }
+    public string Password { get; set; }
+
+    public int PostId { get; set; }
 }
 
 public class Blog
 {
     public int BlogId { get; set; }
     public string Url { get; set; }
+    public string Name { get; set; }
+    public int PostId { get; set; }
 
     public List<Post> Posts { get; } = new(); 
 }
@@ -37,3 +48,4 @@ public class BloggingContext : DbContext
         options.UseSqlite($"Data Source={DbPath}");
     }
 }
+

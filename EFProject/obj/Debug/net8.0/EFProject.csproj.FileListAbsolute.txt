@@ -119,3 +119,4 @@ C:\Users\46708\source\repos\BlogProject\EFProject\obj\Debug\net8.0\refint\EFProj
 C:\Users\46708\source\repos\BlogProject\EFProject\obj\Debug\net8.0\EFProject.pdb
 C:\Users\46708\source\repos\BlogProject\EFProject\obj\Debug\net8.0\EFProject.genruntimeconfig.cache
 C:\Users\46708\source\repos\BlogProject\EFProject\obj\Debug\net8.0\ref\EFProject.dll
+C:\Users\46708\source\repos\BlogProject\EFProject\obj\Debug\net8.0\EFProject.sourcelink.json
