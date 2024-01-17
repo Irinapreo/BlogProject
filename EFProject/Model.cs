@@ -16,8 +16,8 @@ public class User
     public int UserId { get; set; }
     public string Username { get; set; }
     public string Password { get; set; }
-
     public int PostId { get; set; }
+    public Post Post { get; set; }
 }
 
 public class Blog
@@ -26,6 +26,7 @@ public class Blog
     public string Url { get; set; }
     public string Name { get; set; }
     public int PostId { get; set; }
+    public Post Post { get; set; }
 
     public List<Post> Posts { get; } = new(); 
 }
